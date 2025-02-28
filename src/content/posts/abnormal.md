@@ -3,6 +3,7 @@ title: "The New Abnormal"
 description: "Tossed into the tempest, and still tumbling down....this 98Acres article offers a peek into the pandemic's raging pandemonium. An insight into the many trials and errors of the management in a premier institute during the global pandemic."
 pubDate: "2021-09-21"
 heroImage: "/abnormal/newabnormal.png"
+authors: ["Ranojoy Baisya", "Rajashree Nayak", "Suryadeepto Nag", "Sabareesh SS", "Satavisha De", "Ishani Hira", "Varuni Nagesh", "Naren S Narayanan", "Amoghavarsha AV"]
 ---
 
 Approx reading time: 15 mins
