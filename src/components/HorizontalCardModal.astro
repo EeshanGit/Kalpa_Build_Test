@@ -1,0 +1,120 @@
+---
+const { title, img, desc, url, badge, tags, target = "" ,info=""} = Astro.props;
+import { Image } from "astro:assets";
+const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
+const people_id = title.replace(/\s/g, "")
+---
+
+
+
+<script>
+  class AstroGreet extends HTMLElement {
+    constructor() {
+      super();
+
+      // Read the message from the data attribute.
+      const people_id = this.dataset.people_id;
+      function handleClick () {
+      document.getElementById(people_id).showModal()}
+    
+      document.getElementById(people_id+"_button").addEventListener("click", handleClick);
+      };
+      
+    }
+  
+    
+  customElements.define('astro-greet', AstroGreet);
+</script>
+
+
+<astro-greet id={people_id+"_greet"} data-people_id={people_id}>
+<button id={people_id+"_button"}>
+<div
+  class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
+>
+
+    <div class="hero-content flex-col md:flex-row">
+      {
+        img && (
+          <Image
+            src={img}
+            width={750}
+            height={422}
+            format="webp"
+            alt={title}
+            loading="lazy"
+            class="max-w-full md:max-w-[13rem] rounded-lg"
+          />
+        )
+      }
+      <div class="grow w-full text-left">
+        
+        <h1 class="prose text-xl font-bold">
+          {title}
+          {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
+        </h1>
+
+        <p class="prose py-1 text-1xl">{desc}</p>
+        <div class="card-actions justify-end">
+          {
+            tags &&
+              tags.map((tag) => (
+                <a href={`${tag_url}/${tag}`} class="badge badge-outline">
+
+                  {tag}
+                </a>
+              ))
+          }
+        </div>
+      </div>
+    </div>
+  
+</div>
+</button>
+</astro-greet>
+
+
+
+<dialog id={people_id} class="modal">
+  <div class="modal-box p-0">
+    <div class="card glass w-full">
+      <!-- <figure>
+        <img
+          src={img}
+          alt="car!" />
+      </figure> -->
+      <Image
+      src={img}
+      width={750}
+      height={422}
+      format="webp"
+      alt={title}
+      loading="lazy"
+    />
+      <div class="card-body">
+        <article class="prose">
+        
+          <!-- <div class="badge badge-lg bg-[#7a2c4a] text-white border-[#7a2c4a] font-medium rounded-xl ">{desc}</div> -->
+          <div class="badge badge-lg bg-[#ad2f3b] text-white border-[#ad2f3b] font-medium rounded-xl ">{desc}</div>
+
+        <h2 class="card-title mt-1">{title} </h2>
+        
+        
+        <p set:html={info}></p>
+      </article>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- <button class="btn bg-[#941b27] text-white shadow-xl hover:bg-[#b83942] border-0">Close</button> -->
+            <button class="btn shadow-md">Close</button>
+
+          </form>
+        </div>
+      
+        
+      </div>
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
