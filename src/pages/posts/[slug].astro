@@ -30,5 +30,8 @@ const { Content } = await entry.render();
   badge={post.badge}
   tags={post.tags}
 >
+  {post.authors && post.authors.length > 0 && (
+  <p><strong>By:</strong> {post.authors.join(", ")}</p>
+)}
   <Content />
 </PostLayout>
