@@ -1,8 +1,12 @@
 ---
-const { title, img, desc, url, badge, tags, target = "" } = Astro.props;
+const { title, img, desc, url, badge, tags, target, pubDate, authors= "" } = Astro.props;
 import { Image } from "astro:assets";
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 const refer = title.replace(/^\s+|\s+$/gm,'');
+const authorString = authors.toString().split(",").join(", ");
+const dateTimeFormatter = new Intl.DateTimeFormat("en-US",{dateStyle: 'long'})
+const neededDate = dateTimeFormatter.format(new Date(pubDate));
+
 ---
 
 <div
@@ -25,11 +29,20 @@ const refer = title.replace(/^\s+|\s+$/gm,'');
         )
       }
       <div class="grow w-full">
-        <h1 class="prose text-xl font-bold" transition:name={`${refer} title`}>
-          {title}
+        <h1 style="display:flex; justify-content:space-between; align-items:center;" class="prose text-xl font-bold" transition:name={`${refer} title`}>
+          <span style="text-align:left;">
+            {title}
+          </span>
+          <span style="text-align: right; color:gray; font-size: medium;">
+            {neededDate}  
+          </span>
           {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
         </h1>
         <p class="prose py-1 text-1xl" transition:name={`${refer} desc`}>{desc}</p>
+        {/*<footer>
+          <hr style="border:none; border-top: 3px dashed gray "> <br>
+          Authors : {authorString}
+        </footer>*/}
         <div class="card-actions justify-end">
           {
             tags &&
