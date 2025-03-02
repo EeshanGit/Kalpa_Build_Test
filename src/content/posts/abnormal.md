@@ -4,6 +4,7 @@ description: "Tossed into the tempest, and still tumbling down....this 98Acres a
 pubDate: "2021-09-21"
 heroImage: "/abnormal/newabnormal.png"
 authors: ["Ranojoy Baisya", "Rajashree Nayak", "Suryadeepto Nag", "Sabareesh SS", "Satavisha De", "Ishani Hira", "Varuni Nagesh", "Naren S Narayanan", "Amoghavarsha AV"]
+type: "98 Acres"
 ---
 
 Approx reading time: 15 mins
