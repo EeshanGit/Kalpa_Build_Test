@@ -1,0 +1,44 @@
+---
+import SearchBar from "@components/SearchBar.astro"
+import BaseLayout from "@layouts/BaseLayout.astro"
+
+---
+
+<BaseLayout sideBarActiveItemID = "home">
+    <div class="text-3xl w-full font-bold mb-5 mt-5">Search for Articles</div>
+
+    <SearchBar 
+        titletext = "Article Title"
+        id = "article_input"
+        placeholder = "Enter article name (partial, keyowrds allowed)"
+        />
+    <SearchBar 
+        titletext = "Author Name"
+        id = "author_input"
+        placeholder = "Enter author name (partial allowed)"
+    />
+
+    <input type="checkbox" id = "article_type" multiple = true>
+    <br>
+    <button id ="search_button" onclick= GetData()>
+        Click to Search!
+    </button>
+    <script>
+        const types = {
+            A:"98 Acres",
+            B: "Op-Eds",
+            C:"All"
+        };
+        var select = document.getElementById("article_type");
+        for (let index in types) {
+            select.options[select.options.length] = new Option(types[index],index);    
+        }
+
+        function GetData(art_id = "article_input", auth_id = "author_input", typ_id = "article_type")
+            {
+                auth_string = document.getElementById(auth_id).value()
+            }
+    </script>
+
+
+</BaseLayout>
