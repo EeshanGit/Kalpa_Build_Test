@@ -1,0 +1,96 @@
+---
+/*const response = await fetch("/krcsvs/cricket.csv");
+const csvText = await response.text();
+
+console.log(csvText)
+const jsonData = Papa.parse(csvText, { header: true }).data;
+fetch("/api/cricket.json")
+  .then((res) => res.json())
+  .then((data) => console.log(data))
+  .catch((err) => console.error("Fetch error:", err));*/
+const {link,format} = Astro.props
+---
+
+<head>
+    <!-- Load PapaParse from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" defer></script>
+  </head>
+  <section id = "scoredata">
+
+  </section>
+<script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (typeof Papa === "undefined") {
+          console.error("PapaParse failed to load!");
+          return;
+        }
+        const link = JSON.parse('"$(Astro.props.link)"')
+        fetch({link})
+          .then(response => response.text())
+          .then(csvText => {
+            const jsonData = Papa.parse(csvText, {
+              header: true,
+              skipEmptyLines: true
+            });
+  
+            console.log("Parsed Data:", jsonData.data);
+            const datasheet = document.getElementById("scoredata");
+
+            if (!datasheet) {
+                console.error("Element with ID 'scoredata' not found!");
+                return;
+            }
+
+               datasheet.innerHTML = jsonData.data.map(card => `
+            <div class="scorecard">
+                <span style="color:gray; text-align:left;">
+                ${card.DATE}
+                </span>
+
+                <div>
+                <div style="text-align: left;">
+                    ${card.teamA}
+                </div>
+                <div style="text-align: right;">
+                    ${card.scoreA} (${card.oversA})
+                </div>
+
+                <div style="text-align: left;">
+                    ${card.teamB}
+                </div>
+                <div style="text-align: right;">
+                    ${card.scoreB} (${card.oversB})
+                </div>
+                </div>
+
+                <hr>
+
+                ${card.result} WON BY ${card.winBy}
+            </div>
+                `).join(""); 
+                })
+
+                .catch(error => console.error("CSV Fetch Error:", error));
+            });
+            
+
+
+        
+    /*(async () => {
+      try {
+        const response = await fetch("/krcsvs/cricket.csv");
+        console.warn(response)
+        const csvText = await response.text();
+        console.warn(csvText)
+        const jsonData = Papa.parse(csvText, {
+          header: true,
+          skipEmptyLines: true,
+        }).data;
+        
+            
+    }   
+        catch (err) {
+        console.error("Error fetching CSV:", err);
+        }})*/
+</script>
+

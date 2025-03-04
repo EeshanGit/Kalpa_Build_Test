@@ -2,6 +2,12 @@
 const {link} = Astro.props
 const response = await fetch(link)
 const cards =  await response.json()
+
+fetch("/api/cricket.json")
+  .then((res) => res.json())
+  .then((data) => console.log(data))
+  .catch((err) => console.error("Fetch error:", err));
+
 ---
 
 <section>

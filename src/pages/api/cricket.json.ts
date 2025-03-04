@@ -6,6 +6,9 @@ export async function GET() {
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
   const filePath = path.join(__dirname, "public/cricket.csv");
+  console.log("Resolved file path:", filePath);
+  console.log("File exists:", fs.existsSync(filePath));
+
   try {
     const csvData = fs.readFileSync(filePath, "utf-8");
 
