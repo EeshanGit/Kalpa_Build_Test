@@ -3,7 +3,7 @@ title: "Blue Collar Blues"
 description: "The students of the institute bear an immense debt to the workers who come in to work everyday from near and far, assuring our comfort in exchange for a livelihood. The odour from the toilets that we complain about has not kept sanitation workers away from work; the spouts of muddy water from under loose bricks has not kept sweepers and cleaners at home, and unholy hours have not stopped us from getting a cup of tea and a bowl of Maggi."
 authors: ["Arya Samanta", "Ipsa Bezbarua", "Ishwari Mulkalwar", "Suryadeepto Nag"]
 pubDate: "12-04-2021"
-heroImage: "/collar/main.jpg"
+heroImage: "/collar/main.png"
 ---
 
 "I don’t like going to school.” says Alam*, while emptying a sack of cement in front of the Hostel. “How old are you?” we ask him. The contract worker is slight, frail—doesn’t look a day older than twelve. He thinks for a while and replies, “Seventeen.” But when asked again, he mumbles, “I don’t know.” Alam is one among the hundreds of workers who earn their living in the bricks, floors, kitchens and toilets of the Indian Institute of Science Education and Research, Pune.
@@ -17,15 +17,16 @@ Almost all services in IISER such as housekeepers, drivers (ambulance or otherwi
 
 Talking to a housekeeper in Hostel-1, who has been here for nine years, we realized that they do not have any agency to report civil, mechanical, or technical complaints via the ticketing system. It requires an IISER email ID for setting up an account and, therefore, due to the absence of floor representatives for over a year (who would have been the first point of contact), the housekeepers request the students—the handful they are familiar with—to create a ticket regarding issues that arise, which range anywhere from clogged latrine pipes to broken lights. Their shifts are from 7AM to 4PM. For Hostel-1, there are six male and three female housekeepers, one assigned to each floor—a remnant from the pre-Hostel-3 era. From another housekeeper, Ram, we come to know that some students spit paan on and around the door-side dustbins, painting even the sides of the walls, which have to be scrubbed off every time. Given how common an occurrence this is—a walk around Hostel-1 third floor would be proof enough—it’s not a stretch to infer on whom we assume the responsibility for maintaining our residential spaces falls exclusively on. Ram says that they cannot choose to behave as indifferently by not cleaning and leaving the place as it is. The housekeepers also choose not to remove the clothes left lying on the drying stands for weeks on end, even though they have been instructed to. When asked if they have anything specific to ask from the student community, Ram replies that if they cooperate, that’d be more than enough.
 
-<img src = '/collar/bathroom-1.jpg'/>     <img src = '/collar/toilets-1.jpg'/> 
+<img src = '/collar/bathroom-1.jpg'/>
 
 Bathrooms and toilets used by the workers living behind the girls’ hostel
+
+<img src = '/collar/toilets-1.jpg'/> 
 
 
 The Security Guards, on the other hand, are contracted via UNIVERSAL. All guards have 8-hour shifts, and at any point in time, there are 10+2 security guards. The extra two of them are called relievers, who fill up in case of absence due to emergency on the part of the rest. The place of duty and the shift (morning, evening or night) of a guard alternates weekly. After every eight days of work, the  ninth day is an official leave for them.
 
-
-                                                             ***
+***
 
 
 
@@ -38,7 +39,7 @@ There are over sixty such workers currently employed in IISER. These workers are
 The workers are often not local to Maharashtra and are brought by contractors from as far as Bihar, Jharkhand, Chhattisgarh and Karnataka, among other places. After their work is done, they move out and go wherever the contract takes them. It is not unusual for the migrant workers to not know how long they’re going to work at IISER. One woman who had been here for a month said, “We have not been told how long we are going to stay here. Just as long as the work lasts. If the work is done in one month, we will leave in one, if it takes two, then two. They have not told us anything.”
 
 
-                                                             ***
+***
 
 
 
@@ -50,7 +51,7 @@ We saw Chintu*, an eleven year old, coating the underside of a large vessel with
 
 The Right (of children) to (free and compulsory) Education Act of 2009, describes free education as a compulsory right of children in the age group of 6–14. Yet, children living in a premier educational institute do not go to school—some haven’t in months, others in years. Most of the children supplement their working parents by doing menial work and household chores. And the less fortunate ones, like Alam*, who was either too young or too malnourished, work as a construction labourer for a few hundred rupees a day.                                                 
 
-                                                             ***
+***
 
 
 
@@ -59,7 +60,7 @@ The workers are housed in tin shacks in the slums behind Hostel-3 (although stud
 
 <img src = '/collar/despite_everything.jpg'/>
 
-                    ‘Despite everything’ (the workers’ settlement in campus behind girls’ hostel)
+‘Despite everything’ (the workers’ settlement in campus behind girls’ hostel)
 
 
 “There were more toilets before, but they stopped working and nobody tried to fix them,” said a woman, “Nobody has been employed to clean the toilets since before the construction of the girls’ hostel was completed. Once in a while, we bring cleaners from the market.”
@@ -68,7 +69,7 @@ A second year BS-MS student says that a worker told him, “We feel disgusted us
 
 Incidentally, according to the Swachh Bharat Abhiyan, Pune has an ODF+ rating, a prerequisite of which states, “On any given day, not a single person defecates in the open.”
 
-                                                             ***
+***
 
 
 
@@ -80,7 +81,7 @@ Incidentally, according to the Swachh Bharat Abhiyan, Pune has an ODF+ rating, a
 
 But what about the issue of open defecation? “I am very surprised to hear about this,” exclaims Dr. Banerjee, “We need to look into it soon. This is unacceptable and a health hazard.” But does the institute claim responsibility? “It’s difficult to say, because it is the contractors’ job to ensure amenities, but as it is happening on institute grounds, IISER bears the responsibility of remedying it once we have been made aware of it.” Open defecation, in fact, is not a secret. Multiple students and a professor have noticed it, although no one reported it. Does this mean that a campus resident’s right to hygienic living conditions should be at the mercy of the vigilance of others? Does the institute believe that a systemic change is in order? “Yes, it would be a good idea to have a forum for workers to lodge complaints directly, that is something to be discussed,” says Dr. Banerjee.
 
-                                                             ***
+***
 
 
 
