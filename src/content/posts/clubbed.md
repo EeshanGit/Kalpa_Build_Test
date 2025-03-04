@@ -3,7 +3,7 @@ title: "Clubbed In"
 description: ""
 authors: ["Khushi Datri", "Srivathsa Kurpad", "Aharna Sarkar", "Saismit Naik", "Shaswat Nair", "Sultan Nazir", "Vasudha Kulkarni", "Krish Pandey"]
 pubDate: "02-11-2022"
-heroImage: "/clubbed/clubbed-main.jpg"
+heroImage: "/clubbed/main.jpg"
 ---
 
 Disclaimer : The primary focus of the investigation conducted and the article is the state of clubs at IISER Pune before the pandemic struck. The list of clubs we interviewed was not exhaustive. 
