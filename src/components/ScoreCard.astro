@@ -1,50 +1,81 @@
 ---
 const {matchno,date,teamA,teamB,scoreA,scoreB,exA,exB,result,winBy} = Astro.props
-console.log(date);
+var winner;
+var {teamAclass,teamBclass} = Astro.props
+if (result == teamA) {
+    winner = teamA
+    teamAclass = "winclass"
+    teamBclass = "loseclass"
+}
+else
+{
+    winner = teamB
+    teamAclass = "loseclass"
+    teamBclass = "winclass"
+}
+
 ---
 <head>
     <style>
-        .scorecard {border: 20px; width: 600px; height: 200px; }
+        .scorecard {border: 20px; width: 600px; height: 150px; font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji;";}
         .date {color: gray; text-align: right;}
-        .teamName{text-align: left;font-size: large;}
+        .teamname{text-align: left;font-size: large; }
+        .match {color: blueviolet; font-size: large; display: flex; justify-content: space-between; margin-bottom: 12px; }
+        .winclass{font-weight: bold; color: black; display: flex; justify-content: space-between;height: 40px;}
+        .loseclass{color: gray; display: flex; justify-content: space-between; height: 40px;}
+        .score{display: flex;justify-content: end;}
+        .extrainfo{}
+        .result{font-weight: bolder; font-size: larger;}
+        hr{height: 4px;border-width: 3px; border-color: green;}
+        bold{color: orange;}
+        italic{color: brown;}
     </style>    
 </head>
 
 <div class="card-actions justify-end"></div>
 
-<div class="card bg-base-100 transition ease-in-out hover:shadow-xl mx-6 my-2 hover:scale-[102%]">
+<div class="card bg-base-100 transition ease-in-out hover:shadow-xl mx-6 my-2 hover:scale-[102%]" style="background-color: lightblue;">
     <div class="card-body">
         <div class="scorecard">
             <div class="match">
-                {matchno}
+                <span>
+                    {matchno}
+                </span>
+                <span class="date">
+                    {date}
+                </span>
+
             </div>
-            <div class="date">
-                {date}
-            </div>
-        
-            <div class="teamName">
-                {teamA}
-            </div>
-            <div class="score">
-                {scoreA}
-                <div class="extraInfo">
-                    {exA}
+            <hr style="height:4px; border-width: 3px;">
+            
+            
+            <div class= {teamAclass}>
+                <div class=teamname>
+                    {teamA}
+                </div>
+                <div class="score">
+                    {scoreA}
+                
+                <div class="extrainfo">
+                    ({exA})
+                </div>
                 </div>
             </div>
-        
-            <div class="teamName">
-                {teamB}
-            </div>
-            <div class="score">
-                {scoreB}
-                <div class="extraInfo">
-                    {exB}
+            <div class= {teamBclass}>
+                <div class="teamName">
+                    {teamB}
+                </div>
+                <div class="score">
+                    {scoreB}
+                    <div class="extrainfo">
+                        ({exB})
+                    </div>
                 </div>
             </div>
-        
+            
             <hr>
             <div class="result">
-                {result} WON BY {winBy}
+                <bold>{result}</bold> WON BY <italic>  {winBy}</italic>
             </div>
         </div>
       <div class="card-actions justify-end">
