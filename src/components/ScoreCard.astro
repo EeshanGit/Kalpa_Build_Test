@@ -17,36 +17,36 @@ else
 ---
 <head>
     <style>
-        .scorecard {border: 20px; width: 600px; height: 150px; font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji;";}
-        .date {color: gray; text-align: right;}
+        .scorecard {border: 20px; width: 100%; height: 35%; font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji;";}
+        .date {color: brown; text-align: right;}
         .teamname{text-align: left;font-size: large; }
-        .match {color: blueviolet; font-size: large; display: flex; justify-content: space-between; margin-bottom: 12px; }
-        .winclass{font-weight: bold; color: black; display: flex; justify-content: space-between;height: 40px;}
-        .loseclass{color: gray; display: flex; justify-content: space-between; height: 40px;}
-        .score{display: flex;justify-content: end;}
+        .match {color: black; font-size: medium; display: flex; justify-content: space-between; margin-bottom: 12px; ; }
+        .winclass{ color: black; display: flex; justify-content: space-between;height: 50px; background-color: rgb(182, 215, 186);}
+        .loseclass{color: black; display: flex; justify-content: space-between; height: 50px; background-color: rgb(238, 189, 189);}
+        .score{display: flex;justify-content: end; }
         .extrainfo{}
         .result{font-weight: bolder; font-size: larger;}
-        hr{height: 4px;border-width: 3px; border-color: green;}
-        bold{color: orange;}
+        hr{height: 4px;border-width: 2px; border-color: rgb(231, 152, 55);}
+        bold{color: darkgreen;}
         italic{color: brown;}
     </style>    
 </head>
 
 <div class="card-actions justify-end"></div>
 
-<div class="card bg-base-100 transition ease-in-out hover:shadow-xl mx-6 my-2 hover:scale-[102%]" style="background-color: lightblue;">
+<div class="card bg-base-100 transition ease-in-out hover:shadow-xl mx-6 my-2 hover:scale-[102%]" style="background-color: rgb(215, 213, 203); width: 100% ; justify-self:center; ">
     <div class="card-body">
         <div class="scorecard">
             <div class="match">
                 <span>
-                    {matchno}
+                    MATCH : {matchno}
                 </span>
                 <span class="date">
                     {date}
                 </span>
 
             </div>
-            <hr style="height:4px; border-width: 3px;">
+            <hr>
             
             
             <div class= {teamAclass}>
@@ -62,7 +62,7 @@ else
                 </div>
             </div>
             <div class= {teamBclass}>
-                <div class="teamName">
+                <div class="teamname">
                     {teamB}
                 </div>
                 <div class="score">

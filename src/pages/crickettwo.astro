@@ -9,7 +9,7 @@ const jsonData = Papa.parse(csvText, {
   header: true,
   skipEmptyLines: true,
 }).data;
-console.log(jsonData);
+
 /*fetch("/public/krcsvs/cricket.csv")
           .then(response => response.text())
           .then(csvText => {
@@ -37,7 +37,8 @@ console.log(jsonData);
 <section id = "scoredata">
 
 </section>
-{jsonData.map(score => (
+{   
+    jsonData.map(score => (
     <ScoreCard 
         matchno = {score.MATCHNO}
         date = {score.DATE}
