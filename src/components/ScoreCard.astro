@@ -1,7 +1,10 @@
 ---
-const {matchno,date,teamA,teamB,scoreA,scoreB,exA,exB,result,winBy} = Astro.props
+import { literal, undefined } from "astro:schema";
+
+const {matchno,date,teamA,teamB,scoreA,scoreB,exA,exB,result,winBy,href} = Astro.props
 var winner;
 var {teamAclass,teamBclass} = Astro.props
+var link;
 if (result == teamA) {
     winner = teamA
     teamAclass = "winclass"
@@ -12,6 +15,14 @@ else
     winner = teamB
     teamAclass = "loseclass"
     teamBclass = "winclass"
+}
+
+if (href != undefined) {
+    link = href  
+}
+else
+{
+    link = ""
 }
 
 ---
@@ -35,6 +46,7 @@ else
 <div class="card-actions justify-end"></div>
 
 <div class="card bg-base-100 transition ease-in-out hover:shadow-xl mx-6 my-2 hover:scale-[102%]" style="background-color: rgb(215, 213, 203); width: 100% ; justify-self:center; ">
+    <a href={link} target="_blank">
     <div class="card-body">
         <div class="scorecard">
             <div class="match">
@@ -81,4 +93,5 @@ else
       <div class="card-actions justify-end">
       </div>
   </div>
+  </a>
 </div>
