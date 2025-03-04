@@ -1,0 +1,94 @@
+---
+import ScoreCard from "@components/ScoreCard.astro"
+var scoreData;
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Papa from "papaparse";
+import fs from "fs";
+const csvText = fs.readFileSync("./public/krcsvs/cricket.csv","utf-8")
+const jsonData = Papa.parse(csvText, {
+  header: true,
+  skipEmptyLines: true,
+}).data;
+console.log(jsonData);
+/*fetch("/public/krcsvs/cricket.csv")
+          .then(response => response.text())
+          .then(csvText => {
+            const jsonData = Papa.parse(csvText, {
+              header: true,
+              skipEmptyLines: true
+            });
+            console.log(jsonData)
+        })
+.catch(error => console.error(error));*/
+
+
+---
+<head>
+    <!-- Load PapaParse from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" defer></script>
+    <style>
+        .title{font-size: xx-large;font-weight: bold;text-align: center;}
+    </style>
+</head>
+<BaseLayout title="Cricket" sideBarActiveItemID="cricket">
+    <div class="title">Cricket</div>
+    <div class="flex flex-wrap gap-4 justify-center">
+    </div>
+<section id = "scoredata">
+
+</section>
+{jsonData.map(score => (
+    <ScoreCard 
+        matchno = {score.MATCHNO}
+        date = {score.DATE}
+        teamA = {score.TEAMA}
+        teamB = {score.TEAMB}
+        scoreA = {score.SCOREA}
+        scoreB = {score.SCOREB}
+        exA = {score.OVA}
+        exB = {score.OVB}
+        result = {score.RESULT}
+        winBy = {score.WIN_BY}
+    />
+)
+)
+}
+<script>
+    
+      /*document.addEventListener("DOMContentLoaded", () => {
+        if (typeof Papa === "undefined") {
+          console.error("PapaParse failed to load!");
+          return;
+        }
+        const link = JSON.parse('"$(Astro.props.link)"')
+        fetch("/public/krcsvs/cricket.csv")
+          .then(response => response.text())
+          .then(csvText => {
+            const jsonData = Papa.parse(csvText, {
+              header: true,
+              skipEmptyLines: true
+            });
+            
+            console.log("Parsed Data:", jsonData.data);
+            const datasheet = document.getElementById("scoredata");
+
+            if (!datasheet) {
+                console.error("Element with ID 'scoredata' not found!");
+                return;
+            }
+
+            datasheet.innerHTML = jsonData.data.map(score => 
+            `
+                <ScoreCard
+                    date = ${score.Date}
+                    teamA = ${"hi"}
+                />
+            `
+            ).join("")
+            
+        })
+
+        .catch (error => console.error("Error:", error));
+    });*/
+</script>
+</BaseLayout>

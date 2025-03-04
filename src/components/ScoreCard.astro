@@ -1,52 +1,53 @@
 ---
-const {link} = Astro.props
-const response = await fetch(link)
-const cards =  await response.json()
-
-fetch("/api/cricket.json")
-  .then((res) => res.json())
-  .then((data) => console.log(data))
-  .catch((err) => console.error("Fetch error:", err));
-
+const {matchno,date,teamA,teamB,scoreA,scoreB,exA,exB,result,winBy} = Astro.props
+console.log(date);
 ---
+<head>
+    <style>
+        .scorecard {border: 20px; width: 600px; height: 200px; }
+        .date {color: gray; text-align: right;}
+        .teamName{text-align: left;font-size: large;}
+    </style>    
+</head>
 
-<section>
-    {cards.map((card) => (
-        <div class = "scorecard"> 
-            <span style="color:gray text-align:left"> 
-                {card.data.date}
-            </span>
+<div class="card-actions justify-end"></div>
 
-            <div>
-                <div style="text-align: left;">
-                    {card.data.teamA} 
-                </div>
-                <div style="text-align: right;">
-                    {card.data.scoreA} ({card.data.ovA})
-                </div>
-
-                <div style="text-align: left;">
-                    {card.data.teamB} 
-                </div>
-                <div style="text-align: right;">
-                    {card.data.scoreB} ({card.data.ovB})
+<div class="card bg-base-100 transition ease-in-out hover:shadow-xl mx-6 my-2 hover:scale-[102%]">
+    <div class="card-body">
+        <div class="scorecard">
+            <div class="match">
+                {matchno}
+            </div>
+            <div class="date">
+                {date}
+            </div>
+        
+            <div class="teamName">
+                {teamA}
+            </div>
+            <div class="score">
+                {scoreA}
+                <div class="extraInfo">
+                    {exA}
                 </div>
             </div>
-
+        
+            <div class="teamName">
+                {teamB}
+            </div>
+            <div class="score">
+                {scoreB}
+                <div class="extraInfo">
+                    {exB}
+                </div>
+            </div>
+        
             <hr>
-
-            {card.data.result} WON BY {card.data.winBy}
-
+            <div class="result">
+                {result} WON BY {winBy}
+            </div>
         </div>
-    )
-    )
-    }
-</section>
-
-<style>
-    .scorecard {
-        height : 100px;
-        width : 100px;
-        border: 1px solid;
-    }
-</style>
+      <div class="card-actions justify-end">
+      </div>
+  </div>
+</div>

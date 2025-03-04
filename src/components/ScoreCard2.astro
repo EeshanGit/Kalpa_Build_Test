@@ -25,7 +25,7 @@ const {link,format} = Astro.props
           return;
         }
         const link = JSON.parse('"$(Astro.props.link)"')
-        fetch({link})
+        fetch("/public/krcsvs/cricket.csv")
           .then(response => response.text())
           .then(csvText => {
             const jsonData = Papa.parse(csvText, {
@@ -52,7 +52,10 @@ const {link,format} = Astro.props
                     ${card.teamA}
                 </div>
                 <div style="text-align: right;">
-                    ${card.scoreA} (${card.oversA})
+                    ${card.scoreA}
+                    <div style = "color:gray">
+                        (${card.oversA})
+                    </div>
                 </div>
 
                 <div style="text-align: left;">
