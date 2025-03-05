@@ -1,4 +1,60 @@
-Match No.,Team 1,Team 2,SCORE1,SCORE2,OV1,OV2,RESULT,WIN BY,DATE,HREF
-1,A,B,98/2,101/0,12,11.3,B,10 WICKETS,12-10-2025,
-2,B,C,198/6,73/10,12,10.9,B,125 RUNS,13-10-2025,
-3,C,A,67/7,68/5,12,11.4,A,5 WICKETS,14-10-2025,
+MATCHNO,TEAMA,TEAMB,SCOREA,SCOREB,OVA,OVB,RESULT,WIN_BY,DATE,HREF
+59,Clutchers,Tectonics,65/5,66/4,12,8.5,Tectonics,6 WICKETS,02-03-2025,https://cricheroes.com/scorecard/15679799/iiser-premier-league-2025/clutchers-vs-tectonics/summary
+58,Resonance,MightyChondria,128/6,76/10,12,12,Resonance,52 RUNS,02-03-2025,https://cricheroes.com/scorecard/15676614/iiser-premier-league-2025/resonance-vs-mightychondria/summary
+57,Faculty 11,Maratha Warriors,88/7,89/6,12,12,Maratha Warriors,4 WICKETS,02-03-2025,https://cricheroes.com/scorecard/15671617/iiser-premier-league-2025/faculty-11-vs-maratha-warriors/live
+56,Admin XI,Dadagiri,93/7,82/10,12,11.4,Admin XI,11 RUNS,02-03-2025,https://cricheroes.com/scorecard/15664927/iiser-premier-league-2025/admin-xi-vs-dadagiri/live
+55,H-Cross,LKG XI,79/4,82/2,12,9,LKG XI,8 WICKETS,02-03-2025,https://cricheroes.com/scorecard/15660505/iiser-premier-league-2025/h-cross-vs-lkg-xi/live
+54,Saandpapers,Dadagiri,73/6,76/3,12,10.3,Dadagiri,7 WICKETS,01-03-2025,https://cricheroes.com/scorecard/15643034/iiser-premier-league-2025/saandpapers-vs-dadagiri/live
+53,Maratha Warriors,Bioharzard,88/7,74/10,12,10.3,Maratha Warriors,14 RUNS,01-03-2025,https://cricheroes.com/scorecard/15638945/iiser-premier-league-2025/maratha-warriors-vs-biohazard/live
+52,Tectonics,Saandpapers,80/3,83/1,12,7,Saandpapers,9 WICKETS,28-02-2025,https://cricheroes.com/scorecard/15621231/iiser-premier-league-2025/tectonics-vs-saandpapers/live
+51,EigenVictors,The Mambas,77/8,78/5,12,11.5,The Mambas,5 WICKETS,28-02-2025,https://cricheroes.com/scorecard/15619047/iiser-premier-league-2025/eigenvictors-vs-the-mambas/live
+50,Faculty 11,EigenVictors,143/2,70/10,12,11.4,Faculty 11,73 RUNS,16-02-2025,https://cricheroes.com/scorecard/15378012/iiser-premier-league-2025/faculty-11-vs-eigenvictors/live
+49,Tech Stars,Alchemist,88/7,89/8,12,11.1,Alchemist,2 WICKETS,16-02-2025,https://cricheroes.com/scorecard/15369972/iiser-premier-league-2025/tech-stars-vs-alchemist/live
+48,Smashers 2025,Gardening Team,53/10,54/1,12,6.5,Gardening Team,9 WICKETS,15-02-2025,https://cricheroes.com/scorecard/15339429/iiser-premier-league-2025/smashers-2025-vs-gardening-team/live
+47,Admin XI,Tectonics,134/6,85/7,12,12,Admin XI,49 RUNS,15-02-2025,https://cricheroes.com/scorecard/15334651/iiser-premier-league-2025/admin-xi-vs-tectonics/live
+46,H-Cross,MightyChondria,60/6,61/2,12,3.4,MightyChrondria,8 WICKETS,15-02-2025,https://cricheroes.com/scorecard/15331702/iiser-premier-league-2025/h-cross-vs-mightychondria/live
+45,H-1,Tectonics,101/9,78/10,12,11.5,H-1,23 RUNS,14-02-2025,https://cricheroes.com/scorecard/15319058/iiser-premier-league-2025/h-1-vs-tectonics/live
+44,Gardening Team,Strong Wall,92/9,54/10,12,11.5,Gardening Team,38 RUNS,14-02-2025,https://cricheroes.com/scorecard/15316189/iiser-premier-league-2025/gardening-team-vs-strong-wall/live
+43,MightChondria,LKG XI,99/9,100/7,12,11.3,LKG XI,3 WICKETS,09-02-2025,https://cricheroes.com/scorecard/15236862/iiser-premier-league-2025/mightychondria-vs-lkg-xi/live
+42,Strong Wall,Baddies Daddies,189/4,69/10,12,10.5,Strong Wall,120 RUNS,09-02-2025,https://cricheroes.com/scorecard/15231692/iiser-premier-league-2025/strong-wall-vs-baddies-daddies/live
+41,Faculty 11,Furious XI (2025),96/3,85/10,12,11.5,Faculty 11,11 RUNS,09-02-2025,https://cricheroes.com/scorecard/15225789/iiser-premier-league-2025/faculty-11-vs-furious-xi(2025)/live
+40,The Mambas,Bioharzard,80/6,81/2,12,8.3,Biohazard,8 WICKETS,09-02-2025,https://cricheroes.com/scorecard/15217457/iiser-premier-league-2025/the-mambas-vs-biohazard/live
+39,Beta Smashers,Baddies Daddies,97/5,96/5,12,12,Beta Smashers,1 RUN,08-02-2025,https://cricheroes.com/scorecard/15190698/iiser-premier-league-2025/beta-smashers-vs-baddies-daddies/live
+38,Admin XI,Saandpapers,97/7,99/2,12,10.3,Saandpapers,8 WICKETS,08-02-2025,https://cricheroes.com/scorecard/15190649/iiser-premier-league-2025/admin-xi-vs-saandpapers/live
+37,Strong Wall,Beta Smashers,142/8,71/9,12,12,Strong Wall,71 RUNS,08-02-2025,https://cricheroes.com/scorecard/15187106/iiser-premier-league-2025/strong-wall-vs-beta-smashers/live
+36,Resonance,Tech Stars,106/7,96/8,12,12,Resonance,10 RUNS,08-02-2025,https://cricheroes.com/scorecard/15181277/iiser-premier-league-2025/resonance-vs-tech-stars/live
+35,H-Cross,Alchemist,93/6,96/2,12,6.5,Alchemist,8 WICKETS,08-02-2025,https://cricheroes.com/scorecard/15177716/iiser-premier-league-2025/h-cross-vs-alchemist/live
+34,The Mambas,Maratha Warriors,73/9,74/1,12,5.3,Maratha Warriors,9 WICKETS,07-02-2025,https://cricheroes.com/scorecard/15164366/iiser-premier-league-2025/the-mambas-vs-maratha-warriors/live
+33,Clutchers,H-1,76/8,78/9,12,9.4,H-1,1 WICKET,07-02-2025,https://cricheroes.com/scorecard/15161904/iiser-premier-league-2025/clutchers-vs-h-1/live
+32,Smashers 2025,Baddies Daddies,141/2,69/7,12,12,Smashers 2025,72 RUNS,02-02-2025,https://cricheroes.com/scorecard/15038458/iiser-premier-league-2025/smashers-2025-vs-baddies-daddies/live
+31,EigenVictors,Furious XI (2025),71/5,72/0,12,5.1,Furious XI (2025),10 WICKETS,02-02-2025,https://cricheroes.com/scorecard/15038443/iiser-premier-league-2025/eigenvictors-vs-furious-xi(2025)/live
+30,Faculty 11,Bioharzard,74/8,76/4,12,9.4,Biohazard,6 WICKETS,02-02-2025,https://cricheroes.com/scorecard/15038405/iiser-premier-league-2025/faculty-11-vs-biohazard/live
+29,Alchemist,Resonance,122/5,80/3,12,12,Alchemist,42 RUNS,02-02-2025,https://cricheroes.com/scorecard/15038371/iiser-premier-league-2025/alchemist-vs-resonance/live
+28,Beta Smashers,Zeher,25-Sep,30/0,12,0.5,Zeher,10 WICKETS,02-02-2025,https://cricheroes.com/scorecard/15038341/iiser-premier-league-2025/beta-smashers-vs-zeher/live
+27,Tectonics,Dadagiri,48/10,49/1,11.3,5,Dadagiri,9 WICKETS,01-02-2025,https://cricheroes.com/scorecard/15038075/iiser-premier-league-2025/tectonics-vs-dadagiri/live
+26,Clutchers,Saandpapers,71/8,75/7,12,10.1,Saandpapers,3 WICKETS,01-02-2025,https://cricheroes.com/scorecard/15038041/iiser-premier-league-2025/clutchers-vs-saandpapers/live
+25,Zeher,Gardening Team,105/6,108/3,12,11.2,Gardening Team,7 WICKETS,01-02-2025,https://cricheroes.com/scorecard/15035069/iiser-premier-league-2025/zeher-vs-gardening-team/live
+24,Maratha Warriors,Furious XI (2025),69/8,72/2,12,6,Furious XI (2025),8 WICKETS,01-02-2025,https://cricheroes.com/scorecard/15031409/iiser-premier-league-2025/maratha-warriors-vs-furious-xi(2025)/live
+23,Tech Stars,LKG XI,107/7,83/6,12,12,Tech Stars,24 RUNS,01-02-2025,https://cricheroes.com/scorecard/15027075/iiser-premier-league-2025/tech-stars-vs-lkg-xi/live
+22,Admin XI,H-1,132/4,69/10,12,11,Admin XI,63 RUNS,31-01-2025,https://cricheroes.com/scorecard/15014708/iiser-premier-league-2025/admin-xi-vs-h-1/live
+21,Furious XI (2025),The Mambas,112/8,63/6,12,12,Furious XI (2025),49 RUNS,26-01-2025,https://cricheroes.com/scorecard/14914144/iiser-premier-league-2025/furious-xi(2025)-vs-the-mambas/live
+20,Strong Wall,Zeher,120/6,66/10,12,11.3,Strong Wall,54 RUNS,26-01-2025,https://cricheroes.com/scorecard/14914110/iiser-premier-league-2025/strong-wall-vs-zeher/live
+19,H-Cross,Tech Stars,72/5,73/1,12,6.1,Tech Stars,9 WICKETS,26-01-2025,https://cricheroes.com/scorecard/14914039/iiser-premier-league-2025/h-cross-vs-tech-stars/live
+18,Admin XI,Clutchers,104/8,36/10,12,8.4,Admin XI,68 RUNS,26-01-2025,https://cricheroes.com/scorecard/14912529/iiser-premier-league-2025/admin-xi-vs-clutchers/live
+17,Smashers 2025,Beta Smashers,138/3,64/8,12,12,Smashers 2025,74 RUNS,25-01-2025,https://cricheroes.com/scorecard/14888960/iiser-premier-league-2025/smashers-2025-vs-beta-smashers/live
+16,Gardening Team,Baddies Daddies,125/5,59/6,12,12,Gardening Team,66 RUNS,25-01-2025,https://cricheroes.com/scorecard/14885611/iiser-premier-league-2025/gardening-team-vs-baddies-daddies/live
+15,Alchemist,MightyChondria,111/6,72/9,12,12,Alchemist,39 RUNS,25-01-2025,https://cricheroes.com/scorecard/14878811/iiser-premier-league-2025/alchemist-vs-mightychondria/live
+14,Resonance,LKG XI,127/8,61/10,12,10.1,Resonance,66 RUNS,25-01-2025,https://cricheroes.com/scorecard/14874497/iiser-premier-league-2025/resonance-vs-lkg-xi/live
+13,Dadagiri,H-1,121/2,63/10,12,11.1,Dadagiri,58 RUNS,25-01-2025,https://cricheroes.com/scorecard/14869775/iiser-premier-league-2025/dadagiri-vs-h-1/live
+12,EigenVictors,Bioharzard,81/5,82/3,12,10.4,Biohazard,7 WICKETS,24-01-2025,https://cricheroes.com/scorecard/14854872/iiser-premier-league-2025/eigenvictors-vs-biohazard/live
+11,Zeher,Baddies Daddies,144/9,56/5,12,12,Zeher,88 RUNS,19-01-2025,https://cricheroes.com/scorecard/14772706/iiser-premier-league-2025/zeher-vs-baddies-daddies/live
+10,Strong Wall,Smashers 2025,128/6,49/10,12,9.2,Strong Wall,79 RUNS,19-01-2025,https://cricheroes.com/scorecard/14768516/iiser-premier-league-2025/strong-wall-vs-smashers-2025/live
+9,Faculty 11,The Mambas,173/1,115/1,12,12,Faculty 11,58 RUNS,19-01-2025,https://cricheroes.com/scorecard/14762666/iiser-premier-league-2025/faculty-11-vs-the-mambas/live
+8,Tech Stars,MightyChondria,87/9,88/6,12,11.3,MightyChrondria,4 WICKETS,19-01-2025,https://cricheroes.com/scorecard/14756177/iiser-premier-league-2025/tech-stars-vs-mightychondria/live
+7,Biohazard,Furious XI (2025),104/6,105/3,12,11.4,Furious XI (2025),7 WICKETS,19-01-2025,https://cricheroes.com/scorecard/14748097/iiser-premier-league-2025/biohazard-vs-furious-xi(2025)/live
+6,Resonance,H-Cross,147/6,59/8,12,12,Resonance,88 RUNS,18-01-2025,https://cricheroes.com/scorecard/14735063/iiser-premier-league-2025/resonance-vs-h-cross/live
+5,Clutchers,Dadagiri,58/8,61/1,12,6,Dadagiri,9 WICKETS,18-01-2025,https://cricheroes.com/scorecard/14732205/iiser-premier-league-2025/clutchers-vs-dadagiri/live
+4,Gardening Team,Beta Smashers,169/1,65/9,12,12,Gardening Team,104 RUNS,18-01-2025,https://cricheroes.com/scorecard/14728164/iiser-premier-league-2025/gardening-team-vs-beta-smashers/live
+3,EigenVictors,Maratha Warriors,82/7,83/2,12,7.1,Maratha Warriors,8 WICKETS,18-01-2025,https://cricheroes.com/scorecard/14723437/iiser-premier-league-2025/eigenvictors-vs-maratha-warriors/live
+2,H-1,Saandpapers,73/4,74/2,12,6.1,Saandpapers,8 WICKETS,18-01-2025,https://cricheroes.com/scorecard/14720054/iiser-premier-league-2025/h-1-vs-saandpapers/live
+1,Alchemist,LKG XI,157/3,69/9,12,12,Alchemist,88 RUNS,17-01-2025,https://cricheroes.com/scorecard/14710059/iiser-premier-league-2025/alchemist-vs-lkg-xi/live

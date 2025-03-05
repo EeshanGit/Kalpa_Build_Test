@@ -1,52 +1,112 @@
 ---
-const {link} = Astro.props
-const response = await fetch(link)
-const cards =  await response.json()
+const {matchno,date,teamA,teamB,scoreA,scoreB,exA,exB,result,winBy,href,type} = Astro.props;
+var winner;
+var {teamAclass,teamBclass} = Astro.props
+var link;
+var target;
+var extraA;
+var extraB;
+if (result == teamA) {
+    winner = teamA
+    teamAclass = "winclass"
+    teamBclass = "loseclass"
+}
+else
+{
+    winner = teamB
+    teamAclass = "loseclass"
+    teamBclass = "winclass"
+}
 
-fetch("/api/cricket.json")
-  .then((res) => res.json())
-  .then((data) => console.log(data))
-  .catch((err) => console.error("Fetch error:", err));
+if (href != "") {
+    link = href  
+    target = "_blank"
+}
+else
+{
+    link = ""
+    target = "_parent"
+}
+
+if (type == "cricket")
+{
+    extraA = "(" + exA + ")";
+    extraB = "(" + exB+ ")"
+}
+
+else
+{
+    extraA = ""
+    extraB = ""
+}
 
 ---
+<head>
+    <style>
+        .scorecard {border: 20px; width: 100%; height: 35%; font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji;";}
+        .date {color: brown; text-align: right;}
+        .teamname{text-align: left;font-size: large; }
+        .match {color: black; font-size: medium; display: flex; justify-content: space-between; margin-bottom: 12px; ; }
+        .winclass{ color: black; display: flex; justify-content: space-between;height: 40px; background-color: rgb(182, 215, 186);}
+        .loseclass{color: black; display: flex; justify-content: space-between; height: 40px; background-color: rgb(238, 189, 189);}
+        .score{display: flex;justify-content: end; }
+        .extrainfo{}
+        .result{font-weight: bolder; font-size: larger;}
+        hr{height: 4px;border-width: 2px; border-color: rgb(231, 152, 55);}
+        bold{color: darkgreen;}
+        italic{color: brown;}
+    </style>    
+</head>
 
-<section>
-    {cards.map((card) => (
-        <div class = "scorecard"> 
-            <span style="color:gray text-align:left"> 
-                {card.data.date}
-            </span>
+<div class="card-actions justify-end"></div>
 
-            <div>
-                <div style="text-align: left;">
-                    {card.data.teamA} 
-                </div>
-                <div style="text-align: right;">
-                    {card.data.scoreA} ({card.data.ovA})
-                </div>
+<div class="card bg-base-100 transition ease-in-out hover:shadow-xl mx-6 my-2 hover:scale-[102%]" style="background-color: rgb(215, 213, 203); width: 100% ; justify-self:center; ">
+    <a href={link} target= {target}>
+    <div class="card-body">
+        <div class="scorecard">
+            <div class="match">
+                <span>
+                    MATCH : {matchno}
+                </span>
+                <span class="date">
+                    {date}
+                </span>
 
-                <div style="text-align: left;">
-                    {card.data.teamB} 
+            </div>
+            <hr>
+            
+            
+            <div class= {teamAclass}>
+                <div class=teamname>
+                    {teamA}
                 </div>
-                <div style="text-align: right;">
-                    {card.data.scoreB} ({card.data.ovB})
+                <div class="score">
+                    {scoreA}
+                
+                <div class="extrainfo">
+                    {extraA}
+                </div>
                 </div>
             </div>
-
+            <div class= {teamBclass}>
+                <div class="teamname">
+                    {teamB}
+                </div>
+                <div class="score">
+                    {scoreB}
+                    <div class="extrainfo">
+                        {extraB}
+                    </div>
+                </div>
+            </div>
+            
             <hr>
-
-            {card.data.result} WON BY {card.data.winBy}
-
+            <div class="result">
+                <bold>{result}</bold> WON BY <italic>  {winBy}</italic>
+            </div>
         </div>
-    )
-    )
-    }
-</section>
-
-<style>
-    .scorecard {
-        height : 100px;
-        width : 100px;
-        border: 1px solid;
-    }
-</style>
+      <div class="card-actions justify-end">
+      </div>
+  </div>
+  </a>
+</div>
