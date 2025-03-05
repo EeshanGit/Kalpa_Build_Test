@@ -21,6 +21,7 @@ const jsonData = Papa.parse(csvText, {
 {   
     jsonData.map(score => (
     <ScoreCard 
+        type = "volleyball"
         matchno = {score.MATCHNO}
         date = {score.DATE}
         teamA = {score.TEAMA}

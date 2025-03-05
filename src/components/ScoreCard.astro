@@ -1,10 +1,11 @@
 ---
-import { literal, undefined } from "astro:schema";
-
-const {matchno,date,teamA,teamB,scoreA,scoreB,exA,exB,result,winBy,href} = Astro.props
+const {matchno,date,teamA,teamB,scoreA,scoreB,exA,exB,result,winBy,href,type} = Astro.props;
 var winner;
 var {teamAclass,teamBclass} = Astro.props
 var link;
+var target;
+var extraA;
+var extraB;
 if (result == teamA) {
     winner = teamA
     teamAclass = "winclass"
@@ -17,12 +18,26 @@ else
     teamBclass = "winclass"
 }
 
-if (href != undefined) {
+if (href != "") {
     link = href  
+    target = "_blank"
 }
 else
 {
     link = ""
+    target = "_parent"
+}
+
+if (type == "cricket")
+{
+    extraA = "(" + exA + ")";
+    extraB = "(" + exB+ ")"
+}
+
+else
+{
+    extraA = ""
+    extraB = ""
 }
 
 ---
@@ -32,8 +47,8 @@ else
         .date {color: brown; text-align: right;}
         .teamname{text-align: left;font-size: large; }
         .match {color: black; font-size: medium; display: flex; justify-content: space-between; margin-bottom: 12px; ; }
-        .winclass{ color: black; display: flex; justify-content: space-between;height: 50px; background-color: rgb(182, 215, 186);}
-        .loseclass{color: black; display: flex; justify-content: space-between; height: 50px; background-color: rgb(238, 189, 189);}
+        .winclass{ color: black; display: flex; justify-content: space-between;height: 40px; background-color: rgb(182, 215, 186);}
+        .loseclass{color: black; display: flex; justify-content: space-between; height: 40px; background-color: rgb(238, 189, 189);}
         .score{display: flex;justify-content: end; }
         .extrainfo{}
         .result{font-weight: bolder; font-size: larger;}
@@ -46,7 +61,7 @@ else
 <div class="card-actions justify-end"></div>
 
 <div class="card bg-base-100 transition ease-in-out hover:shadow-xl mx-6 my-2 hover:scale-[102%]" style="background-color: rgb(215, 213, 203); width: 100% ; justify-self:center; ">
-    <a href={link} target="_blank">
+    <a href={link} target= {target}>
     <div class="card-body">
         <div class="scorecard">
             <div class="match">
@@ -69,7 +84,7 @@ else
                     {scoreA}
                 
                 <div class="extrainfo">
-                    ({exA})
+                    {extraA}
                 </div>
                 </div>
             </div>
@@ -80,7 +95,7 @@ else
                 <div class="score">
                     {scoreB}
                     <div class="extrainfo">
-                        ({exB})
+                        {extraB}
                     </div>
                 </div>
             </div>
