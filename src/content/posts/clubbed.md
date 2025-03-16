@@ -1,6 +1,6 @@
 ---
 title: "Clubbed In"
-description: ""
+description: "Club activities are an integral part of every college and they shape the social life of each student. A big portion of one’s imagination of college is the bustling social life that it has to offer..."
 authors: ["Khushi Datri", "Srivathsa Kurpad", "Aharna Sarkar", "Saismit Naik", "Shaswat Nair", "Sultan Nazir", "Vasudha Kulkarni", "Krish Pandey"]
 pubDate: "02-11-2022"
 heroImage: "/clubbed/main.jpg"
