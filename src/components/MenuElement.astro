@@ -1,22 +1,17 @@
----
-const { sideBarActiveItemID } = Astro.props;
-const activeClass = "bg-base-300"; // For primary color replace with `active` class
----
-
-<ul class="flex space-x-6">
-    <li><a class="py-3 text-base" id="home" href="/">Home</a></li>
-    <li><a class="py-3 text-base" id="about us" href="/aboutus">About us</a></li> 
-    <!---<li><a class="py-3 text-base" id="people" href="/people">People</a></li> -->
-    <li><a class="py-3 text-base" id="join us" href="/joinus">Volunteering</a></li>
-    
-
-
-
-
-    <li><a class="py-3 text-base" id="posts" href="/posts/">Posts</a>
+<div
+  class="sticky top-0 z-30 flex h-20 w-full items-center justify-between bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content px-4 text-2xl"
+>
+  <!-- Center: Menu Links -->
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1 flex gap-x-6 items-center text-lg">
+      <li><a href="/" class="hover:text-gray-500">Home</a></li>
+      <li><a href="/about" class="hover:text-gray-500">About us</a></li>
+      <li><a href="/volunteering" class="hover:text-gray-500">Volunteering</a></li>
+      <li>
         <details>
             <summary class="py-3 text-base cursor-pointer">Posts</summary>
             <ul class="ml-4">
+                <li><a class="py-2 text-base" id = "posts" href="/posts/"> All Articles</a></li>
                 <li><a class="py-2 text-base" id="opeds" href="/opeds/">Op-Eds</a></li>
                 <li><a class="py-2 text-base" id="98 Acres" href="/98 Acres/">98 Acres</a></li>
                 <li><a class="py-2 text-base" id="sports" href="/Sports/">Sports</a></li>
@@ -38,19 +33,17 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
             </ul>
         </details>
     </li>
-    <!---<li><a class="py-3 text-base" id="contact" href="/contact">Contact</a></li> -->
-    <!-- <li><a class="py-3 text-base" id="cv" href="/cv">CV</a></li> -->
-    <li>
-        <a
-            class="py-3 text-base"
-            href="mailto:kalpa@sac.iiserpune.ac.in"
-            target="_blank"
-            referrerpolicy="no-referrer-when-downgrade">Contact</a
-        >
-    </li>
-</ul>
 
-<script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
-const activeItemElem = document.getElementById(sideBarActiveItemID);
-activeItemElem && activeItemElem.classList.add(activeClass);
-</script>
+      <li><a href="/contact" class="hover:text-gray-500">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Right: Mobile Menu -->
+  <div class="navbar-end lg:hidden">
+    <label for="my-drawer" class="btn btn-square btn-ghost">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </label>
+  </div>
+</div>
