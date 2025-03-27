@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
-
+import Section from "@components/Section.astro";
 const posts = (await getCollection("posts")).sort((a, b) => new Date (b.data.pubDate).valueOf() - new Date (a.data.pubDate).valueOf());
 const opeds = posts.filter(post => post.data.type == "Op-Ed")
 const Acres = posts.filter(post => post.data.type == "98 Acres")
@@ -64,7 +64,7 @@ const last_posts = posts.filter(post => new Date(post.data.pubDate) > new Date("
 <div>
   <div class="text-3xl w-full font-bold mb-5 mt-5">98 Acres</div>
 </div>
-
+<!--
 {
   Acres.map((post) => (
     <>
@@ -81,6 +81,12 @@ const last_posts = posts.filter(post => new Date(post.data.pubDate) > new Date("
       <div class="divider my-0" />
     </>
   ))
+}
+-->
+{
+  <Section
+    wanted_posts = {"98 Acres"}
+  />
 }
 
 <div>

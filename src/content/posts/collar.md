@@ -4,6 +4,7 @@ description: "The students of the institute bear an immense debt to the workers 
 authors: ["Arya Samanta", "Ipsa Bezbarua", "Ishwari Mulkalwar", "Suryadeepto Nag"]
 pubDate: "12-04-2021"
 heroImage: "/collar/main.png"
+type: "98 Acres"
 ---
 
 "I don’t like going to school.” says Alam*, while emptying a sack of cement in front of the Hostel. “How old are you?” we ask him. The contract worker is slight, frail—doesn’t look a day older than twelve. He thinks for a while and replies, “Seventeen.” But when asked again, he mumbles, “I don’t know.” Alam is one among the hundreds of workers who earn their living in the bricks, floors, kitchens and toilets of the Indian Institute of Science Education and Research, Pune.
