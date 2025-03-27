@@ -4,6 +4,7 @@ description: "Labs at IISER never sleep. We love our science, but it seems to co
 authors: ["Vasudha Kulkarni", "Saismit Naik", "Aharna Sarkar", "Khushi Datri", "Shaswat Nair", "Srivathsa Kurpad", "Sultan Nazir"]
 pubDate: "2022-04-18"
 heroImage: "/toxic.webp"
+type: "98 Acres"
 ---
 
 “If there is a deadline, then I would rush to the lab in the morning. And my entire day would be just to get that finished off. Whatever it takes, whether it takes the entire night. There are many days when I leave the lab in the morning, after working the entire night.”
