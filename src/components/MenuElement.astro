@@ -1,49 +1,101 @@
-<div
-  class="sticky top-0 z-30 flex h-20 w-full items-center justify-between bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content px-4 text-2xl"
->
-  <!-- Center: Menu Links -->
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1 flex gap-x-6 items-center text-lg">
-      <li><a href="/" class="hover:text-gray-500">Home</a></li>
-      <li><a href="/about" class="hover:text-gray-500">About us</a></li>
-      <li><a href="/volunteering" class="hover:text-gray-500">Volunteering</a></li>
-      <li>
-        <details>
-            <summary class="py-3 text-base cursor-pointer">Posts</summary>
-            <ul class="ml-4">
-                <li><a class="py-2 text-base" id = "posts" href="/posts/"> All Articles</a></li>
-                <li><a class="py-2 text-base" id="opeds" href="/opeds/">Op-Eds</a></li>
-                <li><a class="py-2 text-base" id="98 Acres" href="/98 Acres/">98 Acres</a></li>
-                <li><a class="py-2 text-base" id="sports" href="/Sports/">Sports</a></li>
-                <li><a class="py-2 text-base" id="sentience" href="/Sentience/">Sentience</a></li>
-            </ul>
-        </details>
-    </li>
-    <li>
-        <details>
-            <summary class="py-3 text-base cursor-pointer">Kreedajung 2025</summary>
-            <ul class="ml-4">
-                <li><a class="py-2 text-base" id="basketball" href="/kreedajung/basketball/" >Basketball</a></li>
-                <li><a class="py-2 text-base" id="cricket" href="/kreedajung/cricket/" >Cricket</a></li>
-                <li><a class="py-2 text-base" id="football" href="/kreedajung/football/" >Football</a></li>
-                <li><a class="py-2 text-base" id="frisbee" href="/kreedajung/frisbee/" >Frisbee</a></li>
-                <li><a class="py-2 text-base" id="kabaddi" href="/kreedajung/kabaddi/" >Kabaddi</a></li>
-                <li><a class="py-2 text-base" id="khokho" href="/kreedajung/khokho/" >Kho-Kho</a></li>
-                <li><a class="py-2 text-base" id="volleyball" href="/kreedajung/volleyball/" >Volleyball</a></li>
-            </ul>
-        </details>
-    </li>
+<head>
+  <style>
+      menubar
+      {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgb(222, 16, 16);
+        padding: 20%;
+      }
+  </style>
+</head>
 
-      <li><a href="/contact" class="hover:text-gray-500">Contact</a></li>
+<div
+  class="sticky top-0 z-30 flex h-24 w-full items-center justify-even bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content px-4 text-2xl">
+  <!-- Center: Menu Links -->
+  <!-- <div class = "flex justify-evenly bg-base-100 p-4">
+    <ul class="menu menu-horizontal px-1 flex gap-x-6 items-center text-lg">
+      <li><a href="/" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Home</a></li>
+      <li><a href="/aboutus" class="btn btn-ghost hover:text-gray-500 text-base font-normal">About us</a></li>
+      <li><a href="/joinus" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Volunteering</a></li>
+      <li><a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id = "posts" href="/posts/"> All Articles</a></li>
+      <li><a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="opeds" href="/opeds/">Op-Eds</a></li>
+      <li><a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="98 Acres" href="/98 Acres/">98 Acres</a></li>
+      <li><a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sports" href="/Sports/">Sports and Games</a></li>
+      <li><a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sentience" href="/Sentience/">Sentience</a></li>
+      <li><a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sentience" href="/arts/">Arts and Culture</a></li>
+      <li><a href="/contact" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Contact</a></li>
     </ul>
   </div>
 
-  <!-- Right: Mobile Menu -->
+  
   <div class="navbar-end lg:hidden">
     <label for="my-drawer" class="btn btn-square btn-ghost">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </label>
-  </div>
+  </div> -->
+
+  <!-- Mobile Menu (Hidden by Default) -->
+<div id="mobile-menu" class="hidden justify-evenly items-center self-start text-base bg-base-100  p-4" >
+  <a href="/" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Home</a>
+  <a href="/aboutus" class="btn btn-ghost hover:text-gray-500 text-base font-normal">About us</a>
+  <a href="/joinus" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Volunteering</a>
+  <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id = "posts" href="/posts/"> All Articles</a>
+  <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="opeds" href="/opeds/">Op-Eds</a>
+  <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="98 Acres" href="/98 Acres/">98 Acres</a>
+  <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sports" href="/Sports/">Sports and Games</a>
+  <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sentience" href="/Sentience/">Sentience</a>
+  <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sentience" href="/arts/">Arts and Culture</a>
+  <a href="/contact" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Contact</a>
+</div>
+<!-- Right: Social Media & Mobile Menu -->
+<div class="navbar-start flex space-x-4 self-start md:hidden fixed">
+  <button id="menu-toggle" class="focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+  </button>
+</div>
+<!-- Desktop Menu -->
+<div class="menu menu-horizontal px-8 hidden md:flex justify-evenly items-center gap-x-8 text-base bg-base-100 p-4">
+  
+    <a href="/" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Home</a>
+    <a href="/aboutus" class="btn btn-ghost btn btn-ghost hover:text-gray-500 text-base font-normal text-base font-normal">About us</a>
+    <a href="/joinus" class="btn btn-ghost btn btn-ghost hover:text-gray-500 text-base font-normal text-base font-normal">Volunteering</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id = "posts" href="/posts/"> All Articles</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="opeds" href="/opeds/">Op-Eds</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="98 Acres" href="/98 Acres/">98 Acres</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sports" href="/Sports/">Sports and Games</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sentience" href="/Sentience/">Sentience</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sentience" href="/arts/">Arts and Culture</a>
+    <a href="/contact" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Contact</a></li>
+  
+</div>
+
+<!-- JavaScript for Mobile Menu Toggle -->
+<script>
+  function setupMenuToggle() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.onclick = function () {
+        const isOpen = mobileMenu.classList.toggle("hidden");
+
+        // Emit a global event for Menubar.astro to listen
+        window.dispatchEvent(new CustomEvent("menuToggled", { detail: isOpen }));
+      };
+    }
+  }
+
+  // Run on initial load
+  document.addEventListener("DOMContentLoaded", setupMenuToggle);
+
+  // Re-run after Astro navigates to a new page
+  document.addEventListener("astro:after-swap", setupMenuToggle);
+</script>
+
 </div>
