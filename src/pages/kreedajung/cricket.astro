@@ -12,10 +12,10 @@ const jsonData = Papa.parse(csvText, {
 
 ---
 <BaseLayout title="Cricket" sideBarActiveItemID="cricket">
-    <div class="flex text-3xl w-full font-bold mb-5 justify-left">Cricket</div>
+    <div class="flex text-3xl w-full font-bold mb-5 justify-center">Cricket</div>
     <div class="flex flex-wrap gap-4 justify-center">
     </div>
-
+    <div class="flex flex-wrap justify-center">
 {   
     jsonData.map(score => (
     <ScoreCard 
@@ -35,4 +35,5 @@ const jsonData = Papa.parse(csvText, {
 )
 )
 }
+    </div>
 </BaseLayout>

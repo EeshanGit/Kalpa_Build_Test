@@ -4,6 +4,7 @@ description: "This article intends to update the reader (a student probably) on 
 authors: ["Angad Singh" , "Raj Bagwe"]
 pubDate: "2025-02-22"
 heroImage: "/constitution/comic.webp"
+type: "opeds"
 ---
 
 *This article intends to update the reader (a student probably) on the issues that the Constitution of the Student Council of IISER Pune faces. Even apart from the problems in its phrasing and structure, trouble arises from its selective interpretation and, at times, the complete disregard with which the administration and previous Councils have treated it.* 

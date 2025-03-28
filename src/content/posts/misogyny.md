@@ -4,6 +4,7 @@ description: "An account of misogyny on campus."
 authors: ["Gowri Niranjana", "Kunjal Parnami", "Likhith Chandragiri", "Misaal Bedi", "Nikita Gupte", "Saismit Naik", "Satavisha De"]
 pubDate: "2020-08-13"
 heroImage: "/misogyny/misogyny.webp"
+type: "98 Acres"
 ---
 
 TRIGGER WARNING: The following article contains descriptions of incidents that could be disturbing to readers.

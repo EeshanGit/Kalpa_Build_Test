@@ -4,6 +4,7 @@ description: "Club activities are an integral part of every college and they sha
 authors: ["Khushi Datri", "Srivathsa Kurpad", "Aharna Sarkar", "Saismit Naik", "Shaswat Nair", "Sultan Nazir", "Vasudha Kulkarni", "Krish Pandey"]
 pubDate: "02-11-2022"
 heroImage: "/clubbed/main.jpg"
+type: "98 Acres"
 ---
 
 Disclaimer : The primary focus of the investigation conducted and the article is the state of clubs at IISER Pune before the pandemic struck. The list of clubs we interviewed was not exhaustive. 
