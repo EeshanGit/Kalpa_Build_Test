@@ -1,2 +1,29 @@
-MATCHNO,TEAMA,TEAMB,SCOREA,SCOREB,OVA,OVB,RESULT,WIN_BY,DATE,HREF
-
+MATCHNO,TEAMA,TEAMB,SCOREA,SCOREB,SPIRITA,SPIRITB,RESULT
+1,SAYGEX,Bigger Disc Energy,10,7,1,20,SAYGEX WON
+2,SAYGEX,Disc-location,10,4,16,20,SAYGEX WON
+3,SAYGEX,Airbenders,10,4,20,20,SAYGEX WON
+4,SAYGEX,Daddy's Bois,19,6,20,20,SAYGEX WON
+5,SAYGEX,Disk Riders,19,1,NA,NA,SAYGEX WON
+6,SAYGEX,Clutchers,8,1,7,20,SAYGEX WON
+7,Smashers,Bigger Disc Energy,6,7,14,18,,Bigger Disc Energy WON
+8,Smashers,Disc-location,6,6,13,18,DRAW
+9,Smashers,Airbenders,8,4,12,19,Smashers WON
+10,Daddy's Bois,Smashers,2,15,18,19,Smashers WON
+11,Smashers,Disk Riders,12,3,19,16,Smashers WON
+12,Smashers,Clutchers,18,1,20,19,Smashers WON
+13,Bigger Disc Energy,Disc-location,9,6,18,19,Bigger Disc Energy WON
+14,Bigger Disc Energy,Airbenders,NA,NA,NA,NA,YET TO PLAY
+15,Bigger Disc Energy,Daddy's Bois,17,5,15,10,Bigger Disc Energy WON
+16,Bigger Disc Energy,Disk Riders,12,6,18,20,Bigger Disc Energy WON
+17,Bigger Disc Energy,Clutchers,19,0,15,16,Bigger Disc Energy WON
+18,Disc-location,Airbenders,6,7,20,10,Airbenders WON
+19,Disc-location,Daddy's Bois,15,3,15,7,Disc-location WON
+20,Disc-location,Disk Riders,15,1,20,11,Disc-location WON
+21,Disc-location,Clutchers,24,0,20,17,Disc-location WON
+22,Airbenders,Daddy's Bois,12,4,20,10,Airbenders WON
+23,Airbenders,Disk Riders,6,3,20,19,Airbenders WON 
+24,Airbenders,Clutchers,10,0,NA,NA,Airbenders WON (WALKOVER)
+25,Daddy's Bois,Disk Riders,7,5,NA,NA,Daddy's Bois WON
+26,Daddy's Bois,Clutchers,NA,NA,NA,NA,YET TO PLAY
+27,Disk Riders,Clutchers,8,1,13,12,Disk Riders WON
+28,SAYGEX,SMASHERS,NA,NA,NA,NA,YET TO PLAY
