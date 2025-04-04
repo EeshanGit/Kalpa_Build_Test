@@ -6,17 +6,7 @@ var link;
 var target;
 var extraA;
 var extraB;
-if (result == teamA) {
-    winner = teamA
-    teamAclass = "winclass"
-    teamBclass = "loseclass"
-}
-else
-{
-    winner = teamB
-    teamAclass = "loseclass"
-    teamBclass = "winclass"
-}
+var winBY;
 
 if (href != "") {
     link = href  
@@ -32,12 +22,45 @@ if (type == "cricket")
 {
     extraA = "(" + exA + ")";
     extraB = "(" + exB+ ")"
+    winBY = "WON By " + winBy
+    if (result == teamA) {
+        winner = teamA
+        teamAclass = "winclass"
+        teamBclass = "loseclass"
+    }
+    if (result == teamB) {
+        winner = teamB
+        teamAclass = "loseclass"
+        teamBclass = "winclass"
+    } 
 }
 
 else
 {
     extraA = ""
     extraB = ""
+}
+if (type == "frisbee")
+{
+    extraA = " (Spirit: " + exA + ")";
+    extraB = " (Spirit: " + exB + ")";
+    if (result == (teamA + " Won"))
+    {
+        winner = teamA
+        teamAclass = "winclass"
+        teamBclass = "loseclass"
+    }
+    else 
+    {
+        teamAclass = "winclass"
+        teamBclass = "winclass"
+    }
+    if (result == (teamB+" "+"Won"))
+    {
+        winner = teamB
+        teamAclass = "loseclass"
+        teamBclass = "winclass"
+    }
 }
 
 ---
@@ -81,7 +104,7 @@ else
                     {teamA}
                 </div>
                 <div class="score">
-                    {scoreA}
+                    <bold>{scoreA}</bold>
                 
                 <div class="extrainfo">
                     {extraA}
@@ -93,7 +116,7 @@ else
                     {teamB}
                 </div>
                 <div class="score">
-                    {scoreB}
+                    <bold>{scoreB}</bold>
                     <div class="extrainfo">
                         {extraB}
                     </div>
@@ -102,7 +125,7 @@ else
             
             <hr>
             <div class="result">
-                <bold>{result}</bold> WON BY <italic>  {winBy}</italic>
+                <bold>{result}</bold>  <italic>{winBY}</italic>
             </div>
         </div>
       <div class="card-actions justify-end">
