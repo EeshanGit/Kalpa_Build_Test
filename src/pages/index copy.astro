@@ -11,17 +11,17 @@ const last_posts = posts.filter(post => new Date(post.data.pubDate) > new Date("
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-<div class="flex justify-around  w-full items-start">
+<div class="grid grid-cols-3 grid-rows-6 w-full items-start">
 
-  <section class="border-x-2 border-black-300">
-    <div class="text-3xl w-33% font-bold mb-5 mt-5">Kreedajung 2025</div>
+  <section class="border-x-2 border-black-300 row-span-2 ">
+    <div class="text-3xl  font-bold mb-5 mt-5">Opinion Pieces</div>
     {
       <Section
-        wanted_posts = {"98 Acres"}
+        wanted_posts = {"Op-Ed"}
       />
     } 
   </section>
-  <section class="border-x-2 border-black-300 flex-wrap w-1/2 items-start content-start h-full  justify-start ">
+  <section class="border-x-2 border-black-300 items-start content-start h-full  justify-start ">
     <center>
     <div class="text-3xl w-full font-bold mb-5 mt-5" > Welcome to Kalpa!</div>
     <div class="py-2 w-full">
@@ -40,8 +40,16 @@ const last_posts = posts.filter(post => new Date(post.data.pubDate) > new Date("
     </center>
   </section>
 
-  <section class="border-x-2 border-black-300">
-    <div class="text-3xl w-33 font-bold mb-5 mt-5 ">98 Acres</div>
+  <section class="border-x-2 border-black-300 row-span-4">
+    <div class="text-3xl  font-bold mb-5 mt-5 ">98 Acres</div>
+    {
+      <Section
+        wanted_posts = {"98 Acres"}
+      />
+    }
+  </section>
+  <section class="border-x-2 border-black-300 row-span-4 col-start-2">
+    <div class="text-3xl  font-bold mb-5 mt-5 ">Kreedajung 2025</div>
     {
       <Section
         wanted_posts = {"98 Acres"}
