@@ -6,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://eeshangit.github.io',
-  // base:,
+  base: '/src/pages',
   integrations: [mdx(), sitemap(), tailwind()]
 });
