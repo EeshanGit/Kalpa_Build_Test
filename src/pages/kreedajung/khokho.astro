@@ -4,7 +4,7 @@ var scoreData;
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Papa from "papaparse";
 import fs from "fs";
-const csvText = fs.readFileSync("./public/krcsvs/KhoKho.csv","utf-8")
+const csvText = fs.readFileSync("./public/krcsvs/khokho.csv","utf-8")
 const jsonData = Papa.parse(csvText, {
   header: true,
   skipEmptyLines: true,
