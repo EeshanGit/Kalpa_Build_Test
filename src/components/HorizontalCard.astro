@@ -6,9 +6,10 @@ const refer = title.replace(/^\s+|\s+$/gm,'');
 const authorString = authors.toString().split(",").join(", ");
 const dateTimeFormatter = new Intl.DateTimeFormat("en-US",{dateStyle: 'long'})
 console.log(pubDate);
-const neededDate = dateTimeFormatter.format(new Date(pubDate));
-
-
+var neededDate = "";
+if (pubDate != null) {
+   neededDate = dateTimeFormatter.format(new Date(pubDate));
+}
 ---
 
 <div

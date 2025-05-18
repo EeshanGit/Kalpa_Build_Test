@@ -1,0 +1,28 @@
+---
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug";
+const {wanted_posts} = Astro.props;
+const posts = (await getCollection("posts")).sort((a, b) => new Date (b.data.pubDate).valueOf() - new Date (a.data.pubDate).valueOf());
+const wanted = posts.filter(post => post.data.type == wanted_posts)
+const posts_to_show = wanted.slice(0,3)
+---
+<div>
+{
+    posts_to_show.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/posts/" + createSlug(post.data.title, post.slug)}
+          target="_self"
+          badge={post.data.badge}
+          pubDate = {post.data.pubDate}
+          authors = {post.data.authors}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
+</div>

@@ -3,11 +3,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
-import { date } from "astro:schema";
-
+import Section from "@components/Section.astro";
 const posts = (await getCollection("posts")).sort((a, b) => new Date (b.data.pubDate).valueOf() - new Date (a.data.pubDate).valueOf());
-
-const last_posts = posts.slice(0, 3);
+const opeds = posts.filter(post => post.data.type == "Op-Ed")
+const Acres = posts.filter(post => post.data.type == "98 Acres")
+const last_posts = posts.filter(post => new Date(post.data.pubDate) > new Date("2024-01-01"));
 ---
 
 <BaseLayout sideBarActiveItemID="home">
@@ -31,7 +31,7 @@ const last_posts = posts.slice(0, 3);
 
 
 <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-5">Recent Posts</div>
+    <div class="text-3xl w-full font-bold mb-5 mt-5">Latest Posts</div>
   </div>
 
   {
@@ -51,6 +51,65 @@ const last_posts = posts.slice(0, 3);
       </>
     ))
   }
+
+
+{/* <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-5">See Kalpa's Instagram</div> 
+
+    <iframe src = "https://www.instagram.com/kalpa_iiserpune/?hl=en/embed" title="See Kalpa's Instagram">
+    </iframe>
+  
+</div>*/
+}
+<div>
+  <div class="text-3xl w-full font-bold mb-5 mt-5">98 Acres</div>
+</div>
+<!--
+{
+  Acres.map((post) => (
+    <>
+      <HorizontalCard
+        title={post.data.title}
+        img={post.data.heroImage}
+        desc={post.data.description}
+        url={"/posts/" + createSlug(post.data.title, post.slug)}
+        target="_self"
+        badge={post.data.badge}
+        pubDate = {post.data.pubDate}
+        authors = {post.data.authors}
+      />
+      <div class="divider my-0" />
+    </>
+  ))
+}
+-->
+{
+  <Section
+    wanted_posts = {"98 Acres"}
+  />
+}
+
+<div>
+  <div class="text-3xl w-full font-bold mb-5 mt-5">Opinion Posts</div>
+</div>
+
+{
+  opeds.map((post) => (
+    <>
+      <HorizontalCard
+        title={post.data.title}
+        img={post.data.heroImage}
+        desc={post.data.description}
+        url={"/posts/" + createSlug(post.data.title, post.slug)}
+        target="_self"
+        badge={post.data.badge}
+        pubDate = {post.data.pubDate}
+        authors = {post.data.authors}
+      />
+      <div class="divider my-0" />
+    </>
+  ))
+}
 </BaseLayout>
 
 

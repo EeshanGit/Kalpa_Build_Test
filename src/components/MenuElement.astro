@@ -1,0 +1,120 @@
+<head>
+  <style>
+      menubar
+      {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgb(222, 16, 16);
+        padding: 20%;
+      }
+  </style>
+</head>
+
+<div
+  class="sticky top-0 z-30 flex h-24 w-full items-center justify-even bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content px-4 text-2xl">
+  <!-- Center: Menu Links -->
+  <!-- <div class = "flex justify-evenly bg-base-100 p-4">
+    <ul class="menu menu-horizontal px-1 flex gap-x-6 items-center text-lg">
+      <li><a href="/" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Home</a></li>
+      <li><a href="/aboutus" class="btn btn-ghost hover:text-gray-500 text-base font-normal">About us</a></li>
+      <li><a href="/joinus" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Volunteering</a></li>
+      <li><a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id = "posts" href="/posts/"> All Articles</a></li>
+      <li><a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="opeds" href="/opeds/">Op-Eds</a></li>
+      <li><a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="98 Acres" href="/98 Acres/">98 Acres</a></li>
+      <li><a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sports" href="/Sports/">Sports and Games</a></li>
+      <li><a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sentience" href="/Sentience/">Sentience</a></li>
+      <li><a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sentience" href="/arts/">Arts and Culture</a></li>
+      <li><a href="/contact" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Contact</a></li>
+    </ul>
+  </div>
+
+  
+  <div class="navbar-end lg:hidden">
+    <label for="my-drawer" class="btn btn-square btn-ghost">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </label>
+  </div> -->
+
+  <!-- Mobile Menu (Hidden by Default) -->
+<!-- <div id="mobile-menu" class="hidden fixed inset-0  flex flex-col items-center justify-center bg-black bg-opacity-100 text-white space-y-6 text-2xl transition-all duration-300 h-full w-full" >
+  <a href="/" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Home</a>
+  <a href="/aboutus" class="btn btn-ghost hover:text-gray-500 text-base font-normal">About us</a>
+  <a href="/joinus" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Volunteering</a>
+  <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id = "posts" href="/posts/"> All Articles</a>
+  <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="opeds" href="/opeds/">Op-Eds</a>
+  <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="98 Acres" href="/98 Acres/">98 Acres</a>
+  <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sports" href="/Sports/">Sports and Games</a>
+  <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sentience" href="/Sentience/">Sentience</a>
+  <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sentience" href="/arts/">Arts and Culture</a>
+  <a href="/contact" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Contact</a>
+</div> -->
+
+<nav id="mobile-menu" class="hidden h-dvh fixed inset-0 z-[9909] flex flex-col items-center justify-center bg-black bg-opacity-95 text-white space-y-8 text-xl transition-all duration-300 h-100% overflow-auto">
+  <!-- Close Button -->
+  <button id="menu-close" class="absolute top-4 right-4 text-white text-4xl p-3">✕</button>
+  
+  <!-- Menu Links -->
+  <a href="/" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Home</a>
+    <a href="/aboutus" class="btn btn-ghost btn btn-ghost hover:text-gray-500 text-base font-normal text-base font-normal">About us</a>
+    <a href="/joinus" class="btn btn-ghost btn btn-ghost hover:text-gray-500 text-base font-normal text-base font-normal">Volunteering</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id = "posts" href="/posts/"> All Articles</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="opeds" href="/opeds/">Op-Eds</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="98 Acres" href="/98 Acres/">98 Acres</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sports" href="/Sports/">Sports and Games</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="publications" href="/publications/">Publications</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="arts" href="/arts/">Arts and Culture</a>
+    <a href="/contact" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Contact</a></li>
+</nav>
+<!-- Right: Social Media & Mobile Menu -->
+<div class="navbar-start flex space-x-4 self-start md:hidden fixed">
+  <button id="menu-toggle" class="focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+  </button>
+</div>
+
+<!-- Desktop Menu -->
+<div class="menu menu-horizontal px-8 hidden md:flex justify-evenly items-center text-base bg-base-100 p-4 gap-x-6 w-full bg-purple-200">
+  
+    <a href="/" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Home</a>
+    <a href="/aboutus" class="btn btn-ghost btn btn-ghost hover:text-gray-500 text-base font-normal text-base font-normal">About us</a>
+    <a href="/joinus" class="btn btn-ghost btn btn-ghost hover:text-gray-500 text-base font-normal text-base font-normal">Volunteering</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id = "posts" href="/posts/"> All Articles</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="opeds" href="/opeds/">Op-Eds</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="98 Acres" href="/98 Acres/">98 Acres</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="sports" href="/Sports/">Sports and Games</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="publications" href="/publications/">Publications</a>
+    <a class="btn btn-ghost hover:text-gray-500 text-base font-normal" id="arts" href="/arts/">Arts and Culture</a>
+    <a href="/contact" class="btn btn-ghost hover:text-gray-500 text-base font-normal">Contact</a></li>
+  
+</div>
+
+<!-- JavaScript for Mobile Menu Toggle -->
+<script>
+  function setupMenuToggle() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuClose = document.getElementById("menu-close");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuToggle && menuClose && mobileMenu) {
+      menuToggle.onclick = function () {
+        mobileMenu.classList.toggle("hidden");
+        menuToggle.classList.toggle("hidden"); // Hide button when menu opens
+      };
+
+      menuClose.onclick = function () {
+        mobileMenu.classList.toggle("hidden");
+        menuToggle.classList.toggle("hidden"); // Show button again when menu closes
+      };
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", setupMenuToggle);
+  document.addEventListener("astro:after-swap", setupMenuToggle);
+</script>
+
+</div>
