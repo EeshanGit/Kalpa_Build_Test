@@ -13,12 +13,13 @@ const { sideBarActiveItemID } = Astro.props;
 
   <div class="flex space-x-6">
     <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
-  </div>
+     <a href="/" class="w-12 h-12">
+      <Image format="png" width={48} height={48} src="/kalpalogo.png" alt="Kalpa logo" />
+     </a>
+  </nav>
 
-  <a href="/" class="w-12 h-12">
-    <Image format="png" width={48} height={48} src="/kalpalogo.png" alt="Kalpa logo" />
-  </a>
-</nav>
-
-<div class="mt-20"></div>
-
+  <div class="mt-20"></div>
+    
+    <SideBarFooter />
+  </aside>
+</div>
