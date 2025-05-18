@@ -1,0 +1,17 @@
+[
+    {
+        "title" : "Cricket",
+        "desc" : "IISER Premier League 2025",
+        "img" : "/krimgs/cricket.svg",
+        "url" : "/kreedajung/cricket"
+    },
+
+    {
+        "title" : "Frisbee",
+        "desc" : "Intra-IISER Ultimate Frisbee Tournament",
+        "img" : "/krimgs/frisbee.svg",
+        "url" : "/kreedajung/frisbee"
+
+    }
+
+]
