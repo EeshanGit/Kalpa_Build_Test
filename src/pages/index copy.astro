@@ -2,7 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
-import createSlug from "../lib/createSlug"
+import createSlug from "../lib/createSlug";
+import jsonData from "../content/kreedajung/kreedajung.json";
 import Section from "@components/Section.astro";
 const posts = (await getCollection("posts")).sort((a, b) => new Date (b.data.pubDate).valueOf() - new Date (a.data.pubDate).valueOf());
 const opeds = posts.filter(post => post.data.type == "Op-Ed")
@@ -13,7 +14,7 @@ const last_posts = posts.filter(post => new Date(post.data.pubDate) > new Date("
 <BaseLayout sideBarActiveItemID="home">
 <div class="md:grid grid-cols-3 grid-rows-6 w-full items-start ">
 
-  <section class="md:border-x-2 border-black-300 items-start content-start h-full  justify-start md:col-start-2 ">
+  <section class="md:border-x-2 border-black-300 items-start content-start justify-start md:col-start-2 ">
     <center>
     <div class="text-3xl w-full font-bold mb-5 mt-5" > Welcome to Kalpa!</div>
     <div class="py-2 w-full">
@@ -36,7 +37,7 @@ const last_posts = posts.filter(post => new Date(post.data.pubDate) > new Date("
     <div class="text-3xl  font-bold mb-5 mt-5 "> <center>Opinion Pieces</center></div>
     {
       <Section
-        wanted_posts = {"Op-Ed"}
+        wanted_posts = {"opeds"}
       />
     } 
   </section>
@@ -48,13 +49,19 @@ const last_posts = posts.filter(post => new Date(post.data.pubDate) > new Date("
       />
     }
   </section>
-  <section class="md:border-x-2 border-black-300 row-span-4 col-start-2">
+  <section class="md:border-x-2 border-black-300 row-span-2 col-start-2 row-start-2 ">
     <div class="text-3xl  font-bold mb-5 mt-5 "><center>Kreedajung 2025</center></div>
-    {
-      <Section
-        wanted_posts = {"98 Acres"}
-      />
-    }
+    {jsonData.map((item) => (
+      <>
+        <HorizontalCard
+          title={item.title}
+          img={item.img}
+          desc={item.desc}
+          url = {item.url}
+        />
+        <div class="divider my-0" />
+      </>
+    ))}
   </section>
 </div>
 </BaseLayout>

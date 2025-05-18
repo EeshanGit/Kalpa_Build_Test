@@ -5,7 +5,7 @@ import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
 import Section from "@components/Section.astro";
 const posts = (await getCollection("posts")).sort((a, b) => new Date (b.data.pubDate).valueOf() - new Date (a.data.pubDate).valueOf());
-const opeds = posts.filter(post => post.data.type == "Op-Ed")
+const opeds = posts.filter(post => post.data.type == "opeds")
 const Acres = posts.filter(post => post.data.type == "98 Acres")
 const last_posts = posts.filter(post => new Date(post.data.pubDate) > new Date("2024-01-01"));
 ---
