@@ -4,11 +4,26 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
 import Section from "@components/Section.astro";
-const posts = (await getCollection("posts")).sort((a, b) => new Date (b.data.pubDate).valueOf() - new Date (a.data.pubDate).valueOf());
+
+const posts = (await getCollection("posts")).sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
 const opeds = posts.filter(post => post.data.type == "opeds")
 const Acres = posts.filter(post => post.data.type == "98 Acres")
 const last_posts = posts.filter(post => new Date(post.data.pubDate) > new Date("2024-01-01"));
+
+const siteTitle = "Kalpa | IISER Pune";
+const siteDescription = "Explore Kalpa – the annual student-run magazine from IISER Pune.";
+const siteUrl = "https://kalpaiiserpune.github.io/"; 
+const imageUrl = `${siteUrl}/kalpalogo.png`;
 ---
+
+<Fragment set:head>
+  <title>{siteTitle}</title>
+  <meta property="og:title" content={siteTitle} />
+  <meta property="og:description" content={siteDescription} />
+  <meta property="og:image" content={imageUrl} />
+  <meta property="og:url" content={siteUrl} />
+  <meta property="og:type" content="website" />
+</Fragment>
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
@@ -21,16 +36,14 @@ const last_posts = posts.filter(post => new Date(post.data.pubDate) > new Date("
     </div>
     
     <div class="mt-6">
-
-      <a  class="btn btn-outline hover:btn-accent text-lg font-medium" href="/posts" > Posts</a>
-      <a href="./joinus/index.html"  class="btn ml-5 text-lg font-medium">
+      <a class="btn btn-outline hover:btn-accent text-lg font-medium" href="/posts">Posts</a>
+      <a href="./joinus/index.html" class="btn ml-5 text-lg font-medium">
         Join Us
       </a>
     </div>
   </div>
 
-
-<div>
+  <div>
     <div class="text-3xl w-full font-bold mb-5 mt-5">Latest Posts</div>
   </div>
 
@@ -44,72 +57,41 @@ const last_posts = posts.filter(post => new Date(post.data.pubDate) > new Date("
           url={"/posts/" + createSlug(post.data.title, post.slug)}
           target="_self"
           badge={post.data.badge}
-          pubDate = {post.data.pubDate}
-          authors = {post.data.authors}
+          pubDate={post.data.pubDate}
+          authors={post.data.authors}
         />
         <div class="divider my-0" />
       </>
     ))
   }
 
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-5">98 Acres</div>
+  </div>
 
-{/* <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-5">See Kalpa's Instagram</div> 
+  {
+    <Section wanted_posts={"98 Acres"} />
+  }
 
-    <iframe src = "https://www.instagram.com/kalpa_iiserpune/?hl=en/embed" title="See Kalpa's Instagram">
-    </iframe>
-  
-</div>*/
-}
-<div>
-  <div class="text-3xl w-full font-bold mb-5 mt-5">98 Acres</div>
-</div>
-<!--
-{
-  Acres.map((post) => (
-    <>
-      <HorizontalCard
-        title={post.data.title}
-        img={post.data.heroImage}
-        desc={post.data.description}
-        url={"/posts/" + createSlug(post.data.title, post.slug)}
-        target="_self"
-        badge={post.data.badge}
-        pubDate = {post.data.pubDate}
-        authors = {post.data.authors}
-      />
-      <div class="divider my-0" />
-    </>
-  ))
-}
--->
-{
-  <Section
-    wanted_posts = {"98 Acres"}
-  />
-}
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-5">Opinion Posts</div>
+  </div>
 
-<div>
-  <div class="text-3xl w-full font-bold mb-5 mt-5">Opinion Posts</div>
-</div>
-
-{
-  opeds.map((post) => (
-    <>
-      <HorizontalCard
-        title={post.data.title}
-        img={post.data.heroImage}
-        desc={post.data.description}
-        url={"/posts/" + createSlug(post.data.title, post.slug)}
-        target="_self"
-        badge={post.data.badge}
-        pubDate = {post.data.pubDate}
-        authors = {post.data.authors}
-      />
-      <div class="divider my-0" />
-    </>
-  ))
-}
+  {
+    opeds.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/posts/" + createSlug(post.data.title, post.slug)}
+          target="_self"
+          badge={post.data.badge}
+          pubDate={post.data.pubDate}
+          authors={post.data.authors}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
 </BaseLayout>
-
-
