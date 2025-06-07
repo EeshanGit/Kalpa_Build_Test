@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "@components/HorizontalCard.astro";
+---
+
+<BaseLayout title="magazine" sideBarActiveItemID="magazine">
+  <div class="text-center text-4xl font-bold mb-10">Sentience Editions</div>
+
+  <div class= "span text-3xl w-full font-bold mb-5 mt-5">
+
+    <HorizontalCard title="Sentience June 2025" img="/sentience/sentience_jul_25.png" url="https://drive.google.com/file/d/1mdCG8RPBAddM2477Z3sEU9I7xvKx-qKD/view" target = "blank" badge="NEW" desc = "As the dust settles on another academic year, we at Kalpa are very excited to present to you the June 2025 issue of our newsletter, Sentience. Inside you'll find a heartfelt farewell from a 2020 batch graduate, an exclusive interview with Dr. Bedartha Goswami-an IISER Pune alumnus and now a faculty member in the Data Science department, reports on recent campus events, and more." />
+  </div>
+
+  <div class="divider my-8"></div>
+</BaseLayout>

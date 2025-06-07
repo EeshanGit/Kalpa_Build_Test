@@ -4,6 +4,7 @@ description: "This article intends to update the reader (a student probably) on 
 authors: ["Angad Singh" , "Raj Bagwe"]
 pubDate: "2025-02-22"
 heroImage: "/constitution/comic.webp"
+badge : "NEW"
 type: "opeds"
 ---
 
